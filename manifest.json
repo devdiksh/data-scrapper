@@ -4,7 +4,8 @@
   "version": "1.0",
   "description": "Scrap web data",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "action": {
     "default_icon": {
@@ -13,5 +14,11 @@
     },
     "default_popup": "popup.html",
     "default_title": "Click to Scrape Data"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
